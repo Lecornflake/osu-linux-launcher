@@ -23,10 +23,6 @@ chmod u+x osu.sh
 ```
 
 Note that this script will store the used AppImage in your osu-lazer folder. You may choose to delete your previous lazer AppImage to save disk space.
-On application start, a popup from AppImageLauncher may appear asking you to move your lazer AppImage into your application folder. You can mute this popup **for all AppImages** using
-```bash
-export APPIMAGELAUNCHER_DISABLE=1
-```
 
 #### Update this launcher :
 ```bash

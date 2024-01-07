@@ -67,7 +67,9 @@ if [[ "$LOCAL_VERSION" != "$REMOTE_VERSION" ]] && [[ -n "$REMOTE_VERSION" ]]; th
 fi
 
 if [ -f "$OSUDIR/osu.AppImage" ]; then
+    export APPIMAGELAUNCHER_DISABLE=1
     echo "launching osu! (version $LOCAL_VERSION)" && exec "$OSUDIR/osu.AppImage" &
+    unset "$APPIMAGELAUNCHER_DISABLE"
 else
     echo "No $OSUDIR/osu.AppImage has been found..."
     [ -f "$OSUDIR/osu-version" ] && rm "$OSUDIR/osu-version"
